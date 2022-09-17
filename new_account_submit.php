@@ -13,7 +13,7 @@ $monthly_spending = filter_input(INPUT_POST, 'monthly_spending');
 $query = $pdo->prepare("SELECT * FROM client WHERE email = ?");
 $query->execute([$email]);
 $result = $query->rowCount();
-
+    
 if($result > 0){
     header("Location: new_account.php");
     exit;
